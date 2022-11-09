@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar/Navbar";
+import Home from "./components/home/Home";
+import AddPerson from "./components/person/AddPerson";
+import UpdatePerson from "./components/person/UpdatePerson";
+import GetPerson from "./components/person/GetPerson";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/addperson" element={<AddPerson />} />
+                    <Route exact path="/updateperson/:id" element={<UpdatePerson />} />
+                    <Route exact path="/getperson/:id" element={<GetPerson />} />
+                </Routes>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

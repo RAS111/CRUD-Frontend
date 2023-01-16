@@ -23,7 +23,7 @@ export default function Login() {
             });
     };
 
-    const handleLogin = async (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         try {
             await login(username, password).then(
@@ -57,7 +57,7 @@ export default function Login() {
                                         Por favor ingresa tu usuario y
                                         contraseña!
                                     </p>
-                                    <form onSubmit={handleLogin}>
+                                    <form onSubmit={onSubmit}>
                                         <div className="form-outline form-white mb-4">
                                             <input
                                                 type="text"
@@ -93,7 +93,7 @@ export default function Login() {
                                             className="text-white-50 fw-bold"
                                             to="/register"
                                         >
-                                            Registrate
+                                            Crear una Cuenta
                                         </Link>
                                     </p>
                                 </div>

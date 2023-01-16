@@ -93,7 +93,7 @@ export default function Login() {
                                             className="text-white-50 fw-bold"
                                             to="/register"
                                         >
-                                            Crear una Cuenta
+                                            Registrate
                                         </Link>
                                     </p>
                                 </div>
